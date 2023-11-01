@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://brf1oaeggr8t7"]
+
+[ext_resource type="Texture2D" uid="uid://7e2phlnsofeo" path="res://assets/Sprite-0003.png" id="1_lcld4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w11pw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lcld4")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mgrc7"]
+radius = 24.0208
+
+[node name="PlayerController" type="CharacterBody2D"]
+visibility_layer = 7
+
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_w11pw")
+animation = &"Idle"
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_mgrc7")

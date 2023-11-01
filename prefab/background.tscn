@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfo077m135eho"]
+
+[ext_resource type="Texture2D" uid="uid://cle1p82b280p0" path="res://assets/background.png" id="1_t3coe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v1m76"]
+size = Vector2(20, 525)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(245, 250)
+
+[node name="Wall_Coll-1" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(257, 1.00002)
+rotation = -3.14159
+shape = SubResource("RectangleShape2D_v1m76")
+
+[node name="Wall_Coll-2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(8, 249)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_v1m76")
+
+[node name="Wall_Coll_3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(9.99995, -254)
+rotation = -1.5708
+shape = SubResource("RectangleShape2D_v1m76")
+
+[node name="Wall_Coll-4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-245, 10.5)
+shape = SubResource("RectangleShape2D_v1m76")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(245, 250)
+texture = ExtResource("1_t3coe")
