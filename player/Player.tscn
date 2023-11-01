@@ -1,32 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://brf1oaeggr8t7"]
+[gd_scene load_steps=5 format=3 uid="uid://brf1oaeggr8t7"]
 
-[ext_resource type="Texture2D" uid="uid://7e2phlnsofeo" path="res://assets/Sprite-0003.png" id="1_lcld4"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_w11pw"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_lcld4")
-}],
-"loop": true,
-"name": &"Idle",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}]
+[ext_resource type="Script" path="res://player/PlayerMovement.gd" id="1_otvtc"]
+[ext_resource type="Texture2D" uid="uid://7e2phlnsofeo" path="res://assets/Sprite-0003.png" id="2_lws32"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mgrc7"]
 radius = 24.0208
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_yudfq"]
+radius = 33.3766
+
 [node name="PlayerController" type="CharacterBody2D"]
 visibility_layer = 7
+collision_layer = 2
+collision_mask = 13
+script = ExtResource("1_otvtc")
 
-[node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_w11pw")
-animation = &"Idle"
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_lws32")
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_mgrc7")
+debug_color = Color(0.960784, 0, 0.521569, 0.419608)
+
+[node name="GreeseCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_yudfq")
+debug_color = Color(0, 0.631373, 0.458824, 0.419608)
+
+[connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]

@@ -54,6 +54,10 @@ down={
 2d_render/layer_2="element"
 2d_render/layer_3="player"
 2d_render/layer_4="projectile"
+2d_physics/layer_1="background"
+2d_physics/layer_2="player"
+2d_physics/layer_3="enemies"
+2d_physics/layer_4="collectibles"
 2d_physics/size/viewport_height=648
 2d_physics/size/viewport_width=1152
 

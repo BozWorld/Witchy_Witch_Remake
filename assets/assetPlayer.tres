@@ -1,0 +1,6 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://bdn60pyermaqp"]
+
+[ext_resource type="Texture2D" uid="uid://brsn7hvu2nrur" path="res://assets/Dungeon_Character_2.png" id="1_885m5"]
+
+[resource]
+atlas = ExtResource("1_885m5")
