@@ -11,14 +11,17 @@ config_version=5
 [application]
 
 config/name="Witchy_Witch_Remake"
+config/description="Remake of trying to make a game named “witchy witch “ on GB studio, i decided it was to hard for my skills, lately i haved some idea of remake of my game and decided to think of it
+
+link of notion : Remake of trying to make a game named “witchy witch “ on GB studio, i decided it was to hard for my skills, lately i haved some idea of remake of my game and decided to think of it"
 run/main_scene="res://prefab/Test_scene.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=500
-window/size/viewport_height=500
+window/size/viewport_width=800
+window/size/viewport_height=800
 
 [input]
 

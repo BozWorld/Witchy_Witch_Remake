@@ -1,12 +1,12 @@
 extends CharacterBody2D
 
-var speed = 25000
+var speed = 30000
 var greeseMeter = 0
 
 signal _greeseScore(gr)
 
 
-func _process(delta):
+func process(delta):
 	_greeseScore.emit(greeseMeter)
 	
 func _physics_process(delta):	
